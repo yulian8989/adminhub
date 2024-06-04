@@ -96,71 +96,62 @@
       <main>
         <div class="head-title">
           <div class="left">
-            <h1>Form Add Data</h1>
+            <h1>Dashboard</h1>
           </div>
+          <a href="form.html" class="btn-add">
+            <i class="bx bx-list-plus"></i>
+            <span class="text">Add Data</span>
+          </a>
         </div>
-        <!-- HTML -->
-        <div class="form-container">
-          <form style="display: flex; flex-direction: column; width: 100%">
-            <div
-              style="
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-              "
-            >
-              <div style="flex: 1; margin-right: 10px">
-                <label for="koderuangan">Kode Ruangan:</label><br />
-                <input type="text" id="koderuangan" name="koderuangan" /><br />
-                <label for="namaruangan">Nama Ruangan:</label><br />
-                <input type="text" id="namaruangan" name="namaruangan" /><br />
-                <label for="status">Status:</label><br />
-                <select id="status" name="status">
-                  <option value="completed">Tersedia</option>
-                  <option value="pending">Tidak Tersedia</option></select
-                ><br />
-              </div>
 
-              <div style="flex: 1; margin-left: 10px">
-                <label for="kapasitas">Kapasitas Ruangan:</label><br />
-                <input
-                  type="number"
-                  id="kapasitas"
-                  name="kapasitas"
-                  step="1"
-                  min="0"
-                /><br />
-                <label for="deskripsi">Deskripsi Ruangan:</label><br />
-                <textarea id="deskripsi" name="deskripsi"></textarea><br />
-                <label for="fasilitas">Fasilitas:</label><br />
-                <textarea id="fasilitas" name="fasilitas"></textarea><br />
-              </div>
+        <div class="table-data">
+          <div class="list">
+            <div class="head">
+              <h3>Recent Orders</h3>
+              <i class="bx bx-search"></i>
+              <i class="bx bx-filter"></i>
             </div>
-
-            <div style="width: 100%">
-              <label for="gambar">Upload Gambar:</label><br />
-              <input
-                type="file"
-                id="gambar"
-                name="gambar"
-                accept="image/*"
-                multiple
-                onchange="previewImages(event)"
-              /><br />
-              <div
-                id="previewContainer"
-                style="
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: space-between;
-                  max-width: 900px;
-                "
-              ></div>
-            </div>
-            <div>
-              <input type="submit" value="Submit" style="width: auto" />
-            </div>
-          </form>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Date Order</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="img/people.png" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>01-10-2021</td>
+                  <td><span class="status completed">Completed</span></td>
+                  <td><span class="amount">$100.00</span></td>
+                  <td>
+                    <!-- Tombol Detail -->
+                    <a href="detail.html">
+                      <button style="background-color: var(--green)">
+                        <i class="bx bx-detail"></i>
+                      </button>
+                    </a>
+                    <!-- Tombol Edit -->
+                    <a href="edit.html">
+                      <button style="background-color: var(--yellow)">
+                        <i class="bx bx-edit"></i>
+                      </button>
+                    </a>
+                    <!-- Tombol Hapus -->
+                    <button id="deleteBtn" style="background-color: var(--red)">
+                      <i class="bx bx-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </main>
       <!-- MAIN -->

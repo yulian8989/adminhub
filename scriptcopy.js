@@ -1,3 +1,4 @@
+console.log("Script loaded!");
 const allSideMenu = document.querySelectorAll(".sidebar .side-menu.top li a");
 
 allSideMenu.forEach((item) => {
@@ -80,3 +81,16 @@ function previewImages(event) {
     reader.readAsDataURL(event.target.files[i]);
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Dapatkan elemen tombol yang membuka modal
+  var btn = document.getElementById("deleteBtn");
+
+  // Saat tombol diklik, tampilkan alert
+  btn.onclick = function () {
+    var confirmDelete = confirm("Apakah Anda yakin ingin menghapus item ini?");
+    if (confirmDelete) {
+      // Hapus item
+    }
+  };
+});

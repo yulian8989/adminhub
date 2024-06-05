@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 li {
@@ -463,6 +464,27 @@ body {
 .content main .detail-table table tr:hover {
   background-color: var(--grey);
 }
+
+.content main .card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--dark);
+}
+.content main .card-container a {
+  color: inherit;
+  display: inline-block;
+  width: calc(50% - 20px);
+}
+.content main .card-container .card {
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: var(--light);
+}
+
 /* MAIN */
 /* CONTENT */
 

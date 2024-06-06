@@ -94,3 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+function changeImage(element) {
+  document.getElementById("main-image").src = element.src;
+}

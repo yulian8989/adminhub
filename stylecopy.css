@@ -485,6 +485,48 @@ body {
   background: var(--light);
 }
 
+.content main .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-gap: 24px;
+  width: 100%;
+  color: var(--dark);
+  border-radius: 20px;
+  background: var(--light);
+  padding: 24px;
+  overflow-x: auto;
+}
+.content main .container .image-preview {
+  flex: 2;
+  margin-right: 20px;
+}
+.content main .container .image-preview .small-images img {
+  width: 60px;
+  height: 50px;
+  margin: 3%;
+  cursor: pointer;
+}
+.content main .container .image-preview .description {
+  border: 1px solid #000;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.content main .container .checkout-card {
+  flex: 1;
+  border: 1px solid #000;
+  padding: 20px;
+}
+.content main .container .checkout-card table {
+  width: 100%;
+}
+.content main .container .checkout-card table th,
+.content main .container .checkout-card table td {
+  padding: 10px;
+  text-align: left;
+}
+
 /* MAIN */
 /* CONTENT */
 

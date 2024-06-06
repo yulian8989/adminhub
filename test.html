@@ -1,0 +1,99 @@
+<!-- MAIN -->
+<main>
+  <div class="head-title">
+    <div class="left">
+      <h1>Detail Ruangan</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="image-preview">
+      <img
+        id="main-image"
+        src="img/people.png"
+        alt="Gambar Ruangan"
+        style="width: 500px; height: 300px"
+        onclick="openModal(); currentSlide(1)"
+        class="hover-shadow cursor"
+      />
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">×</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <img src="img/people.png" style="width: 100%" />
+          </div>
+        </div>
+      </div>
+      <!-- Rest of your code -->
+    </div>
+  </div>
+</main>
+<!-- MAIN -->
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>

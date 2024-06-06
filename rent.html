@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="stylecopy.css" />
+
+    <title>AdminHub</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar" class="sidebar">
+      <a href="#" class="brand">
+        <i class="bx bxs-smile"></i>
+        <span class="text">AdminHub</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">My Store</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="text">Team</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content" class="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link">Categories</a>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button type="submit" class="search-btn">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+        <input type="checkbox" id="switch-mode" hidden />
+        <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="profile">
+          <img src="img/people.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Detail Ruangan</h1>
+          </div>
+        </div>
+        <div class="container">
+          <div class="image-preview">
+            <img
+              id="main-image"
+              src="img/people.png"
+              alt="Gambar Ruangan"
+              style="width: 550px"
+            />
+            <div class="small-images">
+              <img
+                onclick="changeImage(this)"
+                src="img/car watermelon.jpg"
+                alt="Gambar Ruangan"
+              />
+              <img
+                onclick="changeImage(this)"
+                src="img/plane.jpg"
+                alt="Gambar Ruangan"
+              />
+              <img
+                onclick="changeImage(this)"
+                src="img/robot.jpg"
+                alt="Gambar Ruangan"
+              />
+              <img
+                onclick="changeImage(this)"
+                src="img/thumbnail.PNG"
+                alt="Gambar Ruangan"
+              />
+              <img
+                onclick="changeImage(this)"
+                src="img/people.png"
+                alt="Gambar Ruangan"
+              />
+              <img
+                onclick="changeImage(this)"
+                src="img/people.png"
+                alt="Gambar Ruangan"
+              />
+            </div>
+            <div class="description">
+              <p>Deskripsi Ruangan</p>
+            </div>
+          </div>
+          <div class="checkout-card">
+            <h4>Nama Ruangan</h4>
+            <table>
+              <tr>
+                <th>Kode</th>
+                <td>Kode Ruangan</td>
+              </tr>
+              <tr>
+                <th>Kapasitas</th>
+                <td>Kapasitas Ruangan</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td>Status Ruangan</td>
+              </tr>
+            </table>
+            <form action="/path/to/your/handler" method="post">
+              <label for="tanggal_mulai">Tanggal Mulai:</label><br />
+              <input
+                type="date"
+                id="tanggal_mulai"
+                name="tanggal_mulai"
+              /><br />
+              <label for="tanggal_selesai">Tanggal Selesai:</label><br />
+              <input
+                type="date"
+                id="tanggal_selesai"
+                name="tanggal_selesai"
+              /><br />
+              <label for="jam_mulai">Jam Mulai:</label><br />
+              <input type="time" id="jam_mulai" name="jam_mulai" /><br />
+              <label for="jam_selesai">Jam Selesai:</label><br />
+              <input type="time" id="jam_selesai" name="jam_selesai" /><br />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="scriptcopy.js"></script>
+  </body>
+</html>

@@ -100,7 +100,20 @@ function changeImage(element) {
 }
 
 function confirmBooking() {
-  if (confirm("Apakah anda yakin ingin meminjam ruangan ini?")) {
+  var tanggal_mulai = document.getElementById("tanggal_mulai").value;
+  var tanggal_selesai = document.getElementById("tanggal_selesai").value;
+  var jam_mulai = document.getElementById("jam_mulai").value;
+  var jam_selesai = document.getElementById("jam_selesai").value;
+
+  if (
+    tanggal_mulai === "" ||
+    tanggal_selesai === "" ||
+    jam_mulai === "" ||
+    jam_selesai === ""
+  ) {
+    alert("Harap isi semua bidang form");
+    return false; // Mencegah formulir disubmit
+  } else if (confirm("Apakah anda yakin ingin meminjam ruangan ini?")) {
     window.location.href = "success.html"; // Ganti dengan URL halaman sukses Anda
     return false; // Mencegah formulir disubmit
   }

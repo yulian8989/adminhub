@@ -98,3 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function changeImage(element) {
   document.getElementById("main-image").src = element.src;
 }
+
+function confirmBooking() {
+  if (confirm("Apakah anda yakin ingin meminjam ruangan ini?")) {
+    window.location.href = "success.html"; // Ganti dengan URL halaman sukses Anda
+    return false; // Mencegah formulir disubmit
+  }
+}

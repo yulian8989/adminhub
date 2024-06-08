@@ -452,7 +452,13 @@ body {
   overflow-x: auto;
   border-collapse: collapse; /* Tambahkan ini */
 }
-
+.content main .detail-table table tr td img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
 .content main .detail-table table tr {
   border: 1px solid var(--dark); /* Ubah ini */
 }
@@ -549,7 +555,8 @@ body {
   width: 100%;
   cursor: pointer;
 }
-.content main .container .checkout-card button {
+.content main .container .checkout-card button,
+.content main .form-container form button {
   background-color: var(--blue); /* Ubah warna latar belakang tombol */
   color: #fff; /* Ubah warna teks tombol */
   border: none;
@@ -563,6 +570,7 @@ body {
   border-radius: 5px; /* Tambahkan border radius ke tombol */
   font-family: inherit;
   font-weight: bold; /* Membuat teks menjadi tebal */
+  width: auto;
 }
 
 /* MAIN */

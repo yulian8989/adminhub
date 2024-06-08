@@ -1,4 +1,36 @@
 console.log("Script loaded!");
+
+// Dapatkan semua elemen <a> dari sidebar
+var sidebarLinks = document.querySelectorAll(".side-menu a");
+
+// Fungsi untuk menghapus kelas 'active' dari semua link
+function removeActiveClass() {
+  sidebarLinks.forEach((link) => {
+    link.parentElement.classList.remove("active");
+  });
+}
+
+// Tambahkan event listener untuk setiap link
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    // Hapus kelas 'active' dari semua link
+    removeActiveClass();
+
+    // Tambahkan kelas 'active' ke link yang diklik
+    event.target.parentElement.classList.add("active");
+  });
+});
+
+// Cek URL saat ini dan tambahkan kelas 'active' ke link yang sesuai
+window.addEventListener("load", (event) => {
+  let currentURL = window.location.href;
+  sidebarLinks.forEach((link) => {
+    if (link.href === currentURL) {
+      removeActiveClass();
+      link.parentElement.classList.add("active");
+    }
+  });
+});
 const allSideMenu = document.querySelectorAll(".sidebar .side-menu.top li a");
 
 allSideMenu.forEach((item) => {

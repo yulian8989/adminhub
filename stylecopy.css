@@ -163,19 +163,21 @@ body {
 /* SIDEBAR */
 
 /* CONTENT */
+.navbar,
 .content {
   position: relative;
   width: calc(100% - 280px);
   left: 280px;
   transition: 0.3s ease;
 }
-.sidebar.hide ~ .content {
+.sidebar.hide ~ .content,
+.sidebar.hide ~ .navbar {
   width: calc(100% - 60px);
   left: 60px;
 }
 
 /* NAVBAR */
-.content nav {
+.navbar nav {
   height: 56px;
   background: var(--light);
   padding: 0 24px;
@@ -188,7 +190,7 @@ body {
   left: 0;
   z-index: 1000;
 }
-.content nav::before {
+.navbar nav::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -198,31 +200,31 @@ body {
   border-radius: 50%;
   box-shadow: -20px -20px 0 var(--light);
 }
-.content nav a {
+.navbar nav a {
   color: var(--dark);
 }
-.content nav .bx.bx-menu {
+.navbar nav .bx.bx-menu {
   cursor: pointer;
   color: var(--dark);
 }
-.content nav .nav-link {
+.navbar nav .nav-link {
   font-size: 16px;
   transition: 0.3s ease;
 }
-.content nav .nav-link:hover {
+.navbar nav .nav-link:hover {
   color: var(--blue);
 }
-.content nav form {
+.navbar nav form {
   max-width: 400px;
   width: 100%;
   margin-right: auto;
 }
-.content nav form .form-input {
+.navbar nav form .form-input {
   display: flex;
   align-items: center;
   height: 36px;
 }
-.content nav form .form-input input {
+.navbar nav form .form-input input {
   flex-grow: 1;
   padding: 0 16px;
   height: 100%;
@@ -233,7 +235,7 @@ body {
   width: 100%;
   color: var(--dark);
 }
-.content nav form .form-input button {
+.navbar nav form .form-input button {
   width: 36px;
   height: 100%;
   display: flex;
@@ -248,13 +250,13 @@ body {
   cursor: pointer;
 }
 
-.content nav .profile img {
+.navbar nav .profile img {
   width: 36px;
   height: 36px;
   object-fit: cover;
   border-radius: 50%;
 }
-.content nav .switch-mode {
+.navbar nav .switch-mode {
   display: block;
   min-width: 50px;
   height: 25px;
@@ -263,7 +265,7 @@ body {
   cursor: pointer;
   position: relative;
 }
-.content nav .switch-mode::before {
+.navbar nav .switch-mode::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -274,7 +276,7 @@ body {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
-.content nav #switch-mode:checked + .switch-mode::before {
+.navbar nav #switch-mode:checked + .switch-mode::before {
   left: calc(100% - (25px - 4px) - 2px);
 }
 /* NAVBAR */
@@ -402,7 +404,6 @@ body {
   cursor: pointer;
 }
 
-/* CSS */
 .content main .form-container {
   display: flex;
   flex-wrap: wrap;
@@ -586,17 +587,17 @@ body {
     left: 200px;
   }
 
-  .content nav .nav-link {
+  .navbar nav .nav-link {
     display: none;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .content nav form .form-input input {
+  .navbar nav form .form-input input {
     display: none;
   }
 
-  .content nav form .form-input button {
+  .navbar nav form .form-input button {
     width: auto;
     height: auto;
     background: transparent;
@@ -604,11 +605,11 @@ body {
     color: var(--dark);
   }
 
-  .content nav form.show .form-input input {
+  .navbar nav form.show .form-input input {
     display: block;
     width: 100%;
   }
-  .content nav form.show .form-input button {
+  .navbar nav form.show .form-input button {
     width: 36px;
     height: 100%;
     border-radius: 0 36px 36px 0;
@@ -616,8 +617,8 @@ body {
     background: var(--red);
   }
 
-  .content nav form.show ~ .notification,
-  .content nav form.show ~ .profile {
+  .navbar nav form.show ~ .notification,
+  .navbar nav form.show ~ .profile {
     display: none;
   }
 
